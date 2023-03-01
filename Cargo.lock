@@ -18,6 +18,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "allo-isolate"
+version = "0.1.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ed55848be9f41d44c79df6045b680a74a78bc579e0813f7f196cd7928e22fb1"
+dependencies = [
+ "anyhow",
+ "atomic",
+ "chrono",
+]
+
+[[package]]
 name = "android_system_properties"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -54,6 +65,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "atomic"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b88d82667eca772c4aa12f0f1348b3ae643424c8876448f3f7bd5787032e234c"
+dependencies = [
+ "autocfg",
 ]
 
 [[package]]
@@ -166,10 +186,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "build-target"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "832133bbabbbaa9fbdba793456a2827627a7d2b8fb96032fa1e7666d7895832b"
+
+[[package]]
 name = "bumpalo"
 version = "3.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0d261e256854913907f67ed06efbc3338dfe6179796deefc1ff763fc1aee5535"
+
+[[package]]
+name = "bytemuck"
+version = "1.13.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "17febce684fd15d89027105661fec94afb475cb995fbc59d2865198446ba2eea"
 
 [[package]]
 name = "byteorder"
@@ -269,6 +301,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "console_error_panic_hook"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
+dependencies = [
+ "cfg-if",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "core-foundation"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -357,6 +399,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "dart-sys"
+version = "4.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d8b5680b5c2cc52f50acb2457d9b3a3b58adcca785db13a0e3655626f601de6"
+dependencies = [
+ "cc",
+]
+
+[[package]]
 name = "digest"
 version = "0.10.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -426,6 +477,37 @@ dependencies = [
  "crc32fast",
  "miniz_oxide 0.6.2",
 ]
+
+[[package]]
+name = "flutter_rust_bridge"
+version = "1.66.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b4c379f9cbca068734374968537edcc7c8254eff9176fbbf2312e331188845d0"
+dependencies = [
+ "allo-isolate",
+ "anyhow",
+ "build-target",
+ "bytemuck",
+ "cc",
+ "chrono",
+ "console_error_panic_hook",
+ "dart-sys",
+ "flutter_rust_bridge_macros",
+ "js-sys",
+ "lazy_static",
+ "libc",
+ "log",
+ "parking_lot",
+ "threadpool",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
+name = "flutter_rust_bridge_macros"
+version = "1.66.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2d9ea6ab31cdf2d92e4970ba5fbc7dbe6266686dc41389bbe9664bc9cce95f82"
 
 [[package]]
 name = "fnv"
@@ -1310,6 +1392,7 @@ dependencies = [
  "chrono",
  "clap",
  "colored",
+ "flutter_rust_bridge",
  "futures-sink",
  "futures-util",
  "hex",
@@ -1527,6 +1610,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "threadpool"
+version = "1.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d050e60b33d41c19108b32cea32164033a9013fe3b46cbd4457559bfbf77afaa"
+dependencies = [
+ "num_cpus",
 ]
 
 [[package]]
