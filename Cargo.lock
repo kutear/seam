@@ -57,6 +57,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "250f629c0161ad8107cf89319e990051fae62832fd343083bea452d93e2205fd"
 
 [[package]]
+name = "allo-isolate"
+version = "0.1.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f56b7997817c178b853573e8bdfb6c3afe02810b43f17d766d6703560074b0c3"
+dependencies = [
+ "anyhow",
+ "atomic",
+ "backtrace",
+ "chrono",
+]
+
+[[package]]
 name = "alloc-no-stdlib"
 version = "2.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -230,6 +242,12 @@ checksum = "f28d99ec8bfea296261ca1af174f24225171fea9664ba9003cbebee704810528"
 dependencies = [
  "num-traits",
 ]
+
+[[package]]
+name = "atomic"
+version = "0.5.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c59bdb34bc650a32731b31bd8f0829cc15d24a708ee31559e0bb34f2bc320cba"
 
 [[package]]
 name = "atomic-polyfill"
@@ -545,6 +563,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "build-target"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "832133bbabbbaa9fbdba793456a2827627a7d2b8fb96032fa1e7666d7895832b"
+
+[[package]]
 name = "bumpalo"
 version = "3.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -822,6 +846,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "console_error_panic_hook"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a06aeb73f470f66dcdbf7223caeebb85984942f22f1adb2a088cf9668146bbbc"
+dependencies = [
+ "cfg-if",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "const-oid"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1058,6 +1092,15 @@ dependencies = [
  "darling_core",
  "quote",
  "syn 2.0.39",
+]
+
+[[package]]
+name = "dart-sys"
+version = "4.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d8b5680b5c2cc52f50acb2457d9b3a3b58adcca785db13a0e3655626f601de6"
+dependencies = [
+ "cc",
 ]
 
 [[package]]
@@ -1346,6 +1389,38 @@ dependencies = [
  "futures-sink",
  "spin 0.9.8",
 ]
+
+[[package]]
+name = "flutter_rust_bridge"
+version = "1.82.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2ae25c4523d6064e90202fb1bfd847f3e3c30026803a20ddfe55fbbe9fbc199d"
+dependencies = [
+ "allo-isolate",
+ "anyhow",
+ "backtrace",
+ "build-target",
+ "bytemuck",
+ "cc",
+ "chrono",
+ "console_error_panic_hook",
+ "dart-sys",
+ "flutter_rust_bridge_macros",
+ "js-sys",
+ "lazy_static",
+ "libc",
+ "log",
+ "parking_lot",
+ "threadpool",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
+name = "flutter_rust_bridge_macros"
+version = "1.82.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1c2fe4c18349a2b17b980a1214e19a4cb7888a86f70ce5a9a0fccb5611f77bdb"
 
 [[package]]
 name = "fnv"
@@ -3974,6 +4049,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "seam_flutter"
+version = "0.1.39"
+dependencies = [
+ "anyhow",
+ "flutter_rust_bridge",
+ "seam_core",
+ "seam_danmu",
+ "seam_status",
+ "tokio",
+]
+
+[[package]]
 name = "seam_gui"
 version = "0.1.8"
 dependencies = [
@@ -5084,6 +5171,15 @@ checksum = "3fdd6f064ccff2d6567adcb3873ca630700f00b5ad3f060c25b5dcfd9a4ce152"
 dependencies = [
  "cfg-if",
  "once_cell",
+]
+
+[[package]]
+name = "threadpool"
+version = "1.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d050e60b33d41c19108b32cea32164033a9013fe3b46cbd4457559bfbf77afaa"
+dependencies = [
+ "num_cpus",
 ]
 
 [[package]]

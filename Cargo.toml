@@ -6,6 +6,7 @@ members = [
     "crates/danmu",
     "crates/marcos",
     "crates/status",
+    "crates/flutter",
 ]
 resolver = "2"
 

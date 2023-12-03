@@ -1,0 +1,19 @@
+[package]
+name = "seam_flutter"
+authors = ["kutear"]
+version = "0.1.39"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+seam_core = { path = "../core" }
+seam_danmu = { path = "../danmu" }
+seam_status = { path = "../status" }
+
+tokio = { version = "1", features = ["full"] }
+flutter_rust_bridge = "1.82.4"
+anyhow = "1"
